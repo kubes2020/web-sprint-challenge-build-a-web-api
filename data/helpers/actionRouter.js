@@ -22,10 +22,11 @@ router.delete('/:id', (req, res)=> {
     })
 })
 
-router.post('/', (req, res)=> {
-    Project.insert(req.body)
-    .then(project => {
-        res.status(201).json(project)
+router.post('/:id', (req, res)=> {
+    const newAction = {...req.body, project_id: req.params.id }
+    Action.insert(newAction)
+    .then(action => {
+        res.status(201).json(action)
     })
     .catch(err => {
         res.status(500).json({message: err.message })
