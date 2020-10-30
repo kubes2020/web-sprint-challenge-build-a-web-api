@@ -61,10 +61,18 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+   -Node.js uses javascript, a single threaded language, that can also make use of asynchronous requests to handle the demands of the backend processing. One huge benefit is that the frontend and backend can be written in the same language to make sharing between client and server easy. Express makes writing backend code much easier by providing built in midddleware functions and helper methods for responses such as redirect, send, status, and request.ip.
+
 1. Understand and explain the use of Middleware?
+   -Middleware is software that is placed in between an operating system and the applications it is running on. Normally this software handles authorization or form validation to either allow the next process to continue as normal by calling next(), or it can alter the data and then call next() or it can simply stop the next action from ever happening.
+
 1. The basic principles of the REST architectural style.
+   -REST is a set of principles to use to keep software congruent and organized yet still allows for an open design with creative freedom. The principles include: uniform interface, client-server, statless, chacheable, layered system, code on demand.
 1. Understand and explain the use of Express Routers.
+   -Express router decides which request handler function will be executed. It allows for clean endpoints with the ability to separate the router components based on groupings that make sense.
+
 1. Describe tooling used to manually test the correctness of an API.
+   -Postman is one application that allows you to interact with your backend to do CRUD operations to make sure everything is working.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
