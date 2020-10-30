@@ -1,17 +1,6 @@
-const express = require('express')
-const server = express()
-const helmet = require('helmet')
-const cors = require('cors')
-const morgan = require('morgan')
+require('dotenv').config()
 
-server.use(helmet())
-server.use(morgan('dev'))
-server.use(cors())
-server.use(express.json())
-
-server.get('/', (req, res) => {
-    res.send('endpoint is working!')
-})
+const server = require('./server.js')
 const port = process.env.PORT || 5500
 
 server.listen(port, () => {
