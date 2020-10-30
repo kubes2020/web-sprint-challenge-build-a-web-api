@@ -42,6 +42,15 @@ router.put('/:id', (req, res)=> {
     })
 })
 
+router.get('/:id', (req, res)=> {
+    Project.getProjectActions(req.params.id)
+    .then(actions => {
+        res.status(200).json(actions)
+    })
+    .catch(err => {
+        res.status(500).json({message: err.message })
+    })
+})
 
 
 module.exports = router
