@@ -34,19 +34,9 @@ router.post('/:id', (req, res)=> {
 })
 
 router.put('/:id', (req, res)=> {
-    Project.update(req.params.id, req.body)
-    .then(project => {
-        res.status(200).json(project)
-    })
-    .catch(err => {
-        res.status(500).json({message: err.message })
-    })
-})
-
-router.get('/:id', (req, res)=> {
-    Project.getProjectActions(req.params.id)
-    .then(actions => {
-        res.status(200).json(actions)
+    Action.update(req.params.id, req.body)
+    .then(action => {
+        res.status(200).json(action)
     })
     .catch(err => {
         res.status(500).json({message: err.message })
